@@ -1,0 +1,26 @@
+:root {
+    --color_1: #212529;
+    --color_2: #f7ede2;
+    --color_3: #affc41;
+    --color_4: #70e000;
+    --color_5: #006400;
+    --color_6: #0fa3b1;
+    --color_7: #003f88;
+    --color_8: #233d4d;
+    --color_9: #efca08;
+    --color_10: #fe7f2d;
+    --color_11: #d54400;
+}
+
+.title {
+    padding: 20px 0px;
+    @media (min-width: 768.98px) {
+        font-size: 80px;
+    }
+    @media (max-width: 767.98px) {
+        font-size: 44px;
+    }
+    text-align: center;
+    font-weight: 700;
+    color: var(--color_11);
+}

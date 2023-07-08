@@ -1,0 +1,56 @@
+// imports
+@import "reset.css";
+@import "_general.scss";
+@import "_header.scss";
+@import "_page.scss";
+@import "_footer.scss";
+// templates
+:root {
+    --color_1: #212529;
+    --color_2: #f7ede2;
+    --color_3: #affc41;
+    --color_4: #70e000;
+    --color_5: #006400;
+    --color_6: #0fa3b1;
+    --color_7: #003f88;
+    --color_8: #233d4d;
+    --color_9: #efca08;
+    --color_10: #fe7f2d;
+    --color_11: #d54400;
+}
+
+body {
+    height: 100%;
+    background-color: var(--color_1);
+    color: var(--color_2);
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        user-select: none;
+
+        .open-menu & {
+            overflow: hidden;
+        }
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+
+
+[class*="__container"] {
+    max-width: 1300px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0px 15px 0px;
+}
+
+.page {
+    flex: 1 1 auto;
+}

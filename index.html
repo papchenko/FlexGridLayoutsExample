@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Outfit:regular500,700,900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Flex & Grid Layouts</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="shake">
+            <div class="hover__flex">
+                <a class="flex" href="/Flex/index.html">Flex</a>
+            </div><br><br><br>
+            <div class="hover__grid">
+                <a class="grid" href="/Grid/index.html">Grid</a>
+            </div><br><br><br>
+            <div class="hover__link">
+                <p>by <a class="link" href="http://papchenko.com">papchenko.com</a></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function delay(time) {
+            return new Promise(resolve => setTimeout(resolve, time));
+        }
+
+        function handleClick(event) {
+        event.preventDefault();
+
+        const href = event.target.getAttribute('href');
+
+        delay(800).then(() => {
+            window.location.href = href;
+        });
+        }
+
+        const links = document.getElementsByTagName('a');
+
+        for (let i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', handleClick);
+        }
+
+        window.addEventListener('load', () => {
+            document.documentElement.classList.add('on-load');
+        })
+    </script>
+</body>
+</html>
