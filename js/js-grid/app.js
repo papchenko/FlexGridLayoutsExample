@@ -38,9 +38,9 @@ const swiperHero = new Swiper('.swiper-hero', {
 // swiper footer
 const swiperFooter = new Swiper('.swiper-ads', {
     direction: 'horizontal',
-    speed: 1500,
+    speed: 500,
       autoplay: {
-        delay: 1500,
+        delay: 500,
       },
       loop: true,
   effect: 'fade',
